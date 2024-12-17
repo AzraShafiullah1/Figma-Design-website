@@ -8,10 +8,15 @@ import Music from './components/Music';
 import ExploreProduct from './components/ExploreProduct';
 import Feature from './components/Feature';
 
+
+
+
 export default function Home() {
   
 return (
  <div>
+
+
      <Hero />
     
       <div className='ml-44 pt-14'>
@@ -65,6 +70,7 @@ return (
       </div>
       </div>
 <Feature />
+
   </div>
   </div>
 

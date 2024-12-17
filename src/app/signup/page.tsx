@@ -20,27 +20,35 @@ const signup = () => {
             <h1 className='font-bold text-black text-2xl'>Create an account</h1>
             <p className='text-black py-1'>Enter your details below</p>
             <div className="relative z-0 w-full mb-5 group">
-             
-              <label
-                htmlFor="floating_email"
-                className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-              >
-                Name
-              </label>
-            </div>
-               <label
-                htmlFor="floating_password"
-                className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-              >
-                Email or Phone Number
-              </label>
-             <label
-                htmlFor="floating_repeat_password"
-                className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-              >
-                Password
-              </label>
-            
+            <div className='flex  flex-col gap-1'>
+                <label htmlFor='name'>Name</label>
+                <input
+                    type="name"
+                    id="name"
+                    name="name"
+                  className="w-full bg-gray-200 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  />
+        </div>
+              <div className='flex text-3 flex-col gap-3'>
+                <label htmlFor='name'>Email or Phone Number</label>
+                <input
+                    type="name"
+                    id="name"
+                    name="name"
+                  className="w-full bg-gray-200 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  />
+        </div>
+        <div     className='flex text-3 flex-col gap-3'>
+              
+              <label htmlFor='name'>Password</label>
+                <input
+                    type="name"
+                    id="name"
+                    name="name"
+                  className="w-full bg-gray-200 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  />
+        </div>
+      </div>
             
             <button type="submit" className="text-white w-[460px] h-[56px] bg-[#DB4444] hover:bg-[#ff5e5e] focus:ring-4 focus:outline-none focus:ring-white font-medium  text-sm px-5 py-2.5 text-center dark:bg-black dark:hover:bg-[#e6b5b5] dark:focus:ring-[#f0afaf]">Create Account</button>
 

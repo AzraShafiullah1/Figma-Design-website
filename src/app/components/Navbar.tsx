@@ -6,30 +6,27 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaRegHeart } from "react-icons/fa";
 import Link from "next/link";
 
-
-
-
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(!isMenuOpen); // Toggle menu open/close
   };
 
   return (
     <div>
- <div className="flex items-center justify-center h-[48px] w-full bg-[#000000] gab-90 px-4 sm:px-6 md:px-10">
-    <span className="text-[#FAFAFA] text-sm sm:text-base">
-      Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
-      <a className="mx-4 underline" href="/home">
-        Shop Now
-      </a>
-    </span>
+      <div className="flex items-center justify-center h-[48px] w-full bg-[#000000] gap-2 px-4 sm:px-6 md:px-10">
+        <span className="text-[#FAFAFA] text-sm sm:text-base">
+          Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+          <a className="mx-4 underline" href="/home">
+            Shop Now
+          </a>
+        </span>
 
-    <select className="bg-[#000000] text-[#FAFAFA] mx-4 text-sm sm:text-base">
-      <option value="english">English</option>
-    </select>
-  </div>
+        <select className="bg-[#000000] text-[#FAFAFA] mx-4 text-sm sm:text-base">
+          <option value="english">English</option>
+        </select>
+      </div>
 
       <header className="text-gray-600 body-font shadow-md">
         <div className="container mx-auto flex p-5 flex-col max-w-full md:flex-row items-center">
@@ -39,7 +36,7 @@ export const Navbar = () => {
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="md:ml-auto md:mr-auto  flex-wrap items-center text-base justify-center gap-9 hidden md:flex">
+          <nav className="md:ml-auto md:mr-auto flex-wrap items-center text-base justify-center gap-9">
             <Link href="/" className="mr-5 hover:underline cursor-pointer text-black">
               Home
             </Link>
@@ -54,22 +51,23 @@ export const Navbar = () => {
             </Link>
           </nav>
 
-             {/* Search, Heart, and Cart Icons */}
-        <div className="flex items-center gap-3 mt-4 md:mt-0">
-          <input
-            type="text"
-            placeholder="What are You Looking For?"
-            className="w-[200px] sm:w-[250px] bg-[#F5F5F5] p-2 rounded-md focus:outline-none"
-          />
-          <IoIosSearch className="text-black text-xl" />
-          <FaRegHeart className="text-black text-xl mx-2" />
-          <AiOutlineShoppingCart className="text-black text-xl mx-2" />
-        </div>
+          {/* Search, Heart, and Cart Icons */}
+          <div className="flex items-center gap-3 mt-4 md:mt-0">
+            <input
+              type="text"
+              placeholder="What are You Looking For?"
+              className="w-[200px] sm:w-[250px] bg-[#F5F5F5] p-2 rounded-md focus:outline-none"
+            />
+            <IoIosSearch className="text-black text-xl" />
+            <FaRegHeart className="text-black text-xl mx-2" />
+            <AiOutlineShoppingCart className="text-black text-xl mx-2" />
+          </div>
+
           {/* Mobile Hamburger Menu Button */}
           <div className="md:hidden flex items-center">
             <button onClick={toggleMenu} className="text-white">
-            <svg
-                xmlns="/public/Menu.gif"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -83,20 +81,25 @@ export const Navbar = () => {
                 />
               </svg>
             </button>
-            </div>
+          </div>
+
           {/* Mobile Dropdown Menu */}
-        <div className={`md:hidden ${isMenuOpen ? "block" : "hidden"} bg-gray-800 text-white px-4 py-2`}>
-          <Link href="/" className="block py-2 hover:underline">Home
-          </Link>
-          <Link href="/contact" className="block py-2 hover:underline">Contact
-          </Link>
-          <Link href="/about" className="block py-2 hover:underline">About
-          </Link>
-          <Link href="/signup" className="block py-2 hover:underline">Sign Up
-          </Link>
+          <div className={`md:hidden ${isMenuOpen ? "block" : "hidden"} bg-gray-800 text-white px-4 py-2`}>
+            <Link href="/" className="block py-2 hover:underline">
+              Home
+            </Link>
+            <Link href="/contact" className="block py-2 hover:underline">
+              Contact
+            </Link>
+            <Link href="/about" className="block py-2 hover:underline">
+              About
+            </Link>
+            <Link href="/signup" className="block py-2 hover:underline">
+              Sign Up
+            </Link>
+          </div>
         </div>
-        </div>
-         </header>
+      </header>
     </div>
   );
 };
