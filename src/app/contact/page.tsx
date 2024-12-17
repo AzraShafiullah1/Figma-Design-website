@@ -7,10 +7,10 @@ import { FaRegEnvelope } from "react-icons/fa";
 
 
 const Contact = () => {
-  const [name, setName] = useState("false");
-  const [email, setEmail] = useState("false");
-  const [phone, setPhone] = useState("false");
-  const [message, setMessage] = useState("false");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
 
   return (
     <div>
