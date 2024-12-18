@@ -1,3 +1,4 @@
+"use client"; // Add this line to indicate this component is client-side
 
 import React from 'react';
 import Image from 'next/image';
@@ -50,7 +51,6 @@ const About = () => {
             <div className="p-4 md:w-1/4 sm:w-1/2 w-full flex">
               <div className="flex flex-col items-center justify-center border-2 border-gray-200 px-6 py-6 w-100 h-100 rounded-lg">
                 <AiOutlineDollar className='text-black size-10'/>
-
                 <div className="mt-4 text-center">
                   <h2 className="font-medium text-3xl text-gray-900">33K</h2>
                   <p className="leading-relaxed">Monthly Product Sale</p>
@@ -160,51 +160,8 @@ const About = () => {
               </Link>
             </li>
           </div>
-        </div> 
-
-        <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-wrap justify-between -m-2">
-            {/* First Box */}
-            <div className="p-4 md:w-1/4 sm:w-1/2 w-full flex ">
-            <div className='flex flex-col items-center justify-center rounded-lg  px-6 py-6'>
-                <Image src="/icon-delivery.png" alt='icon-delivery' width={50} height={70} className='bg-black size-10 rounded-full'/>
-                <div className="mt-4 text-center">
-                <p className="font-bold  text-black  text-sm ">FREE AND FAST DELIVERY</p>
-                <p className="relative bottom-0 text-xs md:py1">Free delivery for all orders over $140</p>
-               
-                </div>
-              </div>
-            </div>
-
-            {/* Second Box */}
-            <div className="p-4 md:w-1/4 sm:w-1/2 w-full flex">
-              <div className="flex flex-wrap items-center justify-center  px-6 py-6 w-100 h-100 rounded-lg">
-              <Image src="/Icon-Customer.png" alt='icon-Customer' width={50} height={70} className='bg-black size-10 rounded-full' style={{ fontSize: '2rem' }}  />
-
-                <div className="mt-4 text-center">
-                  <h2 className="font-bold  text-black  text-sm ">24/7 CUSTOMER SERVICE</h2>
-                  <p className="relative bottom-0 text-xs md:py1">Friendly 24/7 customer support</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Third Box */}
-             <div className="p-4 md:w-1/4 sm:w-1/2 w-full flex">
-                                                           <div className="flex flex-col items-center justify-center  px-6 py-6 w-50 h-50 rounded-lg">
-                                                             <Image src="/shield-tick.png" alt='shield-tick' width={40} height={40} className='bg-black rounded-full' />
-                                                             <div className="mt-4 text-center">
-                                                               <h2 className="title-font font-medium text-sm text-black">MONEY BACK GUARANTEE</h2>
-                                                               <p className="relative bottom-0 text-xs md:py1">We reurn money within 30 days</p>
-                                                             </div>
-                                                           </div>
-                                                         </div>
-
-            
-          </div>
         </div>
-      </section>
- </div>
+      </div>
     </div>
   );
 }

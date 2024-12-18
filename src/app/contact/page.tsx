@@ -1,4 +1,5 @@
 
+
 "use client"; // Add this line to indicate that the component should be a client component
 
 import React, { useState } from 'react';
@@ -120,6 +121,7 @@ const Contact = () => {
 };
 
 export default Contact;
+
 
 
 
