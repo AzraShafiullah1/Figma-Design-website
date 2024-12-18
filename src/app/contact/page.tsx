@@ -1,18 +1,10 @@
-
-
 "use client"; // Add this line to indicate that the component should be a client component
 
-import React, { useState } from 'react';
+import React from 'react';
 import { FaPhoneAlt } from 'react-icons/fa'; 
 import { FaRegEnvelope } from "react-icons/fa";
 
-
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
-
   return (
     <div>
       <section className="text-gray-600 items-center py-20 body-font relative">
@@ -27,8 +19,7 @@ const Contact = () => {
                     id="name"
                     name="name"
                     placeholder="Your Name *"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    defaultValue=""
                     className="w-full bg-gray-200 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
@@ -42,8 +33,7 @@ const Contact = () => {
                     id="email"
                     name="email"
                     placeholder="Your Email *"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    defaultValue=""
                     className="w-full bg-gray-200 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
@@ -57,23 +47,21 @@ const Contact = () => {
                     id="phone"
                     name="phone"
                     placeholder="Your Phone *"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
+                    defaultValue=""
                     className="w-full bg-gray-200 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
               </div>
 
               {/* Message Field */}
-              <div className="p-4 w-full">
+              <div className="p-4 w-full ">
                 <div className="relative">
                   <textarea
                     id="message"
                     name="message"
                     placeholder="Your Message"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    className="w-full bg-gray-200 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-[200px] text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                    defaultValue=""
+                    className="w-[690px] bg-gray-200 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-[250px] text-base outline-none text-gray-700 py-1 px-4 resize-none leading-6 transition-colors duration-200 ease-in-out"
                   />
                 </div>
               </div>
@@ -90,11 +78,11 @@ const Contact = () => {
       </section>
 
       {/* New Contact Box with Call Icon and Info - Centered (Mobile First) */}
-      <div className="p-2 max-w-md mx-auto bg-white rounded-sm shadow-md py-6 sm:py-6 mt-10 sm:mt-20 absolute top-[5%] sm:top-[30%] left-1/4 sm:left-[10%] lg:left-[2%] mb-11 bottom-9 justify-center">
+      <div className="p-2 max-sm:hidden max-w-md mx-auto bg-white rounded-sm shadow-md py-6 sm:py-6 mt-10 sm:mt-20 absolute top-[10%] sm:top-[30%] left-1/4 sm:left-[10%] lg:left-[2%] mb-11 bottom-9 justify-center">
         {/* Call To Us */}
-        <div className="flex items-center space-x-2 mb-4">
+        <div className="md:flex sm:hidden items-center space-x-2 mb-4">
           <FaPhoneAlt className="text-white bg-[#DB4444] rounded-full text-3xl p-2" />
-          <h1 className="text-xl font-semibold">Call to Us</h1>
+          <h1 className="md:text-xl sm:text-xl font-semibold">Call to Us</h1>
         </div>
         <div className="text-gray-700 mb-4 space-x-2">
           <h1>We are available 24/7, 7 days a week.</h1>
@@ -121,7 +109,4 @@ const Contact = () => {
 };
 
 export default Contact;
-
-
-
 
